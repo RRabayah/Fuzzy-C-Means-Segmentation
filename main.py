@@ -25,6 +25,7 @@ def c_i_calculation(mu, points):
         point_total += mu[i,j]
         for z in points:
             total += mu[i, j]*points[z]
+    return total
 
 
 def normalized_cluster_distance(point, current_center, cluster_list, fuzzifier):
