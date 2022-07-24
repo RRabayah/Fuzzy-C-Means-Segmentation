@@ -21,10 +21,11 @@ def compute_l2_distance(points, centers):
 def c_i_calculation(mu, points):
     total = 0
     point_total = 0
-    for i, j in mu:
-        point_total += mu[i,j]
-        for z in points:
-            total += mu[i, j]*points[z]
+    for row in mu:
+        for cell in row:
+            point_total =+ cell
+            for z in points:
+                total += cell*points
     return total
 
 
