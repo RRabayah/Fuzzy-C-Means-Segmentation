@@ -63,7 +63,7 @@ class fuzzy_c():
                 distances[:, i] = compute_l2_distance(X, c)
 
     def backward(self):
-        for i, j in self.centers:
+        for i,j in enumerate(self.centers):
             self.centers[i] = c_i_calculation(self.mu_ij, self.pts)
         return self.centers
 
