@@ -9,3 +9,5 @@ ax.scatter(X[:, 0], X[:, 1], alpha=0.5)
 ax.set_xlabel('$x_1$')
 ax.set_ylabel('$x_2$')
 
+
+
