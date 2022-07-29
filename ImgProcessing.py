@@ -9,14 +9,15 @@ class ImgProcessor:
     def __init__(self,  size):
         self.size = size
 
-    def resize(self, img):
+    def resize(self, img, filename):
         self.img = Image.open(img)
         img_resized = self.img.resize(self.size)
-        im_resize = img_resized.save("resized_img.jpg")
+        os.chdir(modified_directory)
+        im_resize = img_resized.save(filename + "_resized.jpg")
 
 
     def resize_all(self):
         for filename in os.listdir(original_directory):
             f = os.path.join(original_directory, filename)
             if os.path.isfile(f):
-                self.resize(f)
+                self.resize(f, filename)
