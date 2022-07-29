@@ -2,10 +2,10 @@ from PIL import Image
 
 
 class ImgProcessor:
-    def __init__(self, img, size):
-        self.img = Image.open(img)
+    def __init__(self,  size):
         self.size = size
 
-    def resize(self):
+    def resize(self, img):
+        self.img = Image.open(img)
         img_resized = self.img.resize(self.size)
-        im_resize = img_resized.save(self.img + "_resized", "PNG")
+        im_resize = img_resized.save("resized_img.jpg")
