@@ -11,5 +11,5 @@ ax.set_xlabel('$x_1$')
 ax.set_ylabel('$x_2$')
 
 imgprocessor = ImgProcessing.ImgProcessor((480,640))
-imgprocessor.resize_all()
+imgprocessor.modify_all()
 
